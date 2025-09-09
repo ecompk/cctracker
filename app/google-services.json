@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "895909712730",
+    "project_id": "uimobileapp",
+    "storage_bucket": "uimobileapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895909712730:android:60cdde5705acfb4c9ed963",
+        "android_client_info": {
+          "package_name": "com.ccoin.cryptotracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0db1QG5Xp9VgSRHq7P26s3qim83MoVfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895909712730:android:df9bd4963fdcc9fe9ed963",
+        "android_client_info": {
+          "package_name": "com.mycompany.uimobileapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0db1QG5Xp9VgSRHq7P26s3qim83MoVfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/generic8dp"
+    android:layout_marginEnd="@dimen/generic8dp"
+    android:paddingBottom="@dimen/generic8dp"
+    app:cardBackgroundColor="@color/backgroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/generic16dp">
+
+        <ImageView
+            android:id="@+id/cryptoImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/cdLogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_appicon" />
+
+        <TextView
+            android:id="@+id/tvEmptyMessage"
+            style="@style/cryptotrackerText.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/generic16dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cryptoImage"
+            tools:text="Empty String" />
+
+        <Button
+            android:id="@+id/btnAddTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/generic8dp"
+            android:layout_marginTop="@dimen/generic16dp"
+            android:layout_marginEnd="@dimen/generic8dp"
+            android:text="@string/add_transaction"
+            app:layout_constraintTop_toBottomOf="@id/tvEmptyMessage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
