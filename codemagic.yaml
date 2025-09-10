@@ -18,4 +18,11 @@ workflows:
     artifacts:
       - app/build/outputs/apk/release/*.apk
       - app/build/outputs/bundle/release/*.aab
-
+    scripts:
+      - name: Clean Gradle Cache
+        script: |
+          rm -rf ~/.gradle/caches
+      - name: Build APK & AAB
+        script: |
+          chmod +x gradlew
+          ./gradlew clean assembleRelease bundleRelease
