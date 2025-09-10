@@ -22,15 +22,6 @@ android {
     }
 
 
-    signingConfigs {
-        config {
-            keyAlias 'key0'
-            keyPassword '1234567890'
-            storeFile file('keystore(pass=1234567890).jks')
-            storePassword '1234567890'
-        }
-
-    }
     kapt {
         correctErrorTypes true
     }
@@ -38,7 +29,6 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            signingConfig signingConfigs.config
 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
