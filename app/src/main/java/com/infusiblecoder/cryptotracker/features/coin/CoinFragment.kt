@@ -37,6 +37,7 @@ import com.infusiblecoder.cryptotracker.utils.resourcemanager.AndroidResourceMan
 import com.infusiblecoder.cryptotracker.utils.ui.OnVerticalScrollListener
 import com.infusiblecoder.cryptotracker.viewmodels.*
 import java.math.BigDecimal
+import java.util.Locale
 
 class CoinFragment : Fragment(), CoinContract.View, CryptoNewsContract.View, CoinTickerContract.View {
 
@@ -241,7 +242,7 @@ class CoinFragment : Fragment(), CoinContract.View, CryptoNewsContract.View, Coi
         coinDetailList.add(CoinAboutItemView.AboutCoinModuleData(watchedCoin.coin))
 
         coinPresenter.loadHistoricalData(HOUR, watchedCoin.coin.symbol, toCurrency)
-        coinTickerPresenter.getCryptoTickers(watchedCoin.coin.coinName.toLowerCase())
+        coinTickerPresenter.getCryptoTickers(watchedCoin.coin.coinName.lowercase(Locale.US))
         cryptoNewsPresenter.getCryptoNews(watchedCoin.coin.symbol)
         coinPresenter.loadRecentTransaction(watchedCoin.coin.symbol)
 

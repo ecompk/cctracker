@@ -18,6 +18,7 @@ import java.io.IOException
 import java.io.InputStream
 import java.math.BigDecimal
 import java.nio.charset.Charset
+import java.util.Locale
 
 
 
@@ -59,7 +60,7 @@ class CryptoCompareRepository(
             val coinInfoWithCurrencyList = Gson().fromJson<ArrayList<CoinInfoWithCurrency>>(json, amountCurrencyType)
 
             coinInfoWithCurrencyList.forEach {
-                coinInfoMap[it.currencyName.toLowerCase()] = it.info
+                coinInfoMap[it.currencyName.lowercase(Locale.US)] = it.info
             }
 
             return coinInfoMap
@@ -204,7 +205,7 @@ class CryptoCompareRepository(
      * Get all recent transactions
      */
     fun getRecentTransaction(symbol: String): Flow<List<CoinTransaction>>? {
-        return cryptoTrackerDatabase?.coinTransactionDao()?.getTransactionsForCoin(symbol.toUpperCase())
+        return cryptoTrackerDatabase?.coinTransactionDao()?.getTransactionsForCoin(symbol.uppercase(Locale.US))
             ?.distinctUntilChanged()
     }
 

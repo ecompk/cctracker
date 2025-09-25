@@ -26,6 +26,7 @@ import com.infusiblecoder.cryptotracker.databinding.ActivityHomeBinding
 import com.infusiblecoder.cryptotracker.databinding.FragmentDiscoveryBinding
 import com.infusiblecoder.cryptotracker.viewmodels.coinSearchItemView
 import java.math.BigDecimal
+import java.util.Locale
 
 class CoinSearchActivity : AppCompatActivity(), CoinSearchContract.View {
     private var isCoinInfoChanged = false
@@ -89,7 +90,7 @@ class CoinSearchActivity : AppCompatActivity(), CoinSearchContract.View {
 
         binding.etSearchBar.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(filterText: Editable?) {
-                val filterString = filterText.toString().trim().toLowerCase()
+                val filterString = filterText.toString().trim().lowercase(Locale.getDefault())
 
                 showCoinsInTheList(
                     coinList.filter { watchedCoin ->

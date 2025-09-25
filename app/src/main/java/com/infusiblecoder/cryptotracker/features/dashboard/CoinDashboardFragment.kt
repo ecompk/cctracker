@@ -167,8 +167,8 @@ class CoinDashboardFragment : Fragment(), CoinDashboardContract.View {
     override fun onCoinPricesLoaded(coinPriceListMap: HashMap<String, CoinPrice>) {
 
         coinDashboardList.forEachIndexed { index, item ->
-            if (item is CoinItemView.DashboardCoinModuleData && coinPriceListMap.contains(item.watchedCoin.coin.symbol.toUpperCase())) {
-                coinDashboardList[index] = item.copy(coinPrice = coinPriceListMap[item.watchedCoin.coin.symbol.toUpperCase()])
+            if (item is CoinItemView.DashboardCoinModuleData && coinPriceListMap.contains(item.watchedCoin.coin.symbol.uppercase(Locale.US))) {
+                coinDashboardList[index] = item.copy(coinPrice = coinPriceListMap[item.watchedCoin.coin.symbol.uppercase(Locale.US)])
             } else if (item is DashboardHeaderItemView.DashboardHeaderModuleData) {
                 coinDashboardList[index] = item.copy(coinPriceListMap = coinPriceListMap)
             }

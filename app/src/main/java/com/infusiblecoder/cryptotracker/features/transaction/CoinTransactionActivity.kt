@@ -122,7 +122,7 @@ class CoinTransactionActivity : AppCompatActivity(), CoinTransactionContract.Vie
         }
 
         binding. containerExchange.setOnClickListener {
-            val exchangeList = exchangeCoinMap?.get(coin?.symbol?.toUpperCase())
+            val exchangeList = exchangeCoinMap?.get(coin?.symbol?.uppercase(Locale.US))
             if (exchangeList != null) {
 
                 startActivityForResult(
@@ -135,7 +135,7 @@ class CoinTransactionActivity : AppCompatActivity(), CoinTransactionContract.Vie
         binding.  containerPair.setOnClickListener {
             val symbol = coin?.symbol
 
-            val exchangeList = exchangeCoinMap?.get(symbol?.toUpperCase())
+            val exchangeList = exchangeCoinMap?.get(symbol?.uppercase(Locale.US))
             if (exchangeList != null && symbol != null && exchangeName.isNotEmpty()) {
                 startActivityForResult(
                     PairSearchActivity.buildLaunchIntent(this, getTopPair(exchangeList), symbol),
@@ -204,7 +204,7 @@ class CoinTransactionActivity : AppCompatActivity(), CoinTransactionContract.Vie
     }
 
     override fun onCoinPriceLoaded(prices: MutableMap<String, BigDecimal>) {
-        binding. etBuyPrice.setText(prices[pairName.toUpperCase()].toString())
+        binding. etBuyPrice.setText(prices[pairName.uppercase(Locale.US)].toString())
         this.prices = prices
     }
 
@@ -219,14 +219,14 @@ class CoinTransactionActivity : AppCompatActivity(), CoinTransactionContract.Vie
             buyPriceInHomeCurrency = buyPrice
 
             // this means the pair is not home currency one
-            if (prices.size > 1 && prices.containsKey(defaultCurrency.toUpperCase())) {
+            if (prices.size > 1 && prices.containsKey(defaultCurrency.uppercase(Locale.US))) {
                 // get rate
-                val rate = BigDecimal(binding.etBuyPrice.text.toString()).divide(prices[pairName.toUpperCase()], mc)
-                buyPriceInHomeCurrency = (prices[defaultCurrency.toUpperCase()]?.multiply(rate, mc))
+                val rate = BigDecimal(binding.etBuyPrice.text.toString()).divide(prices[pairName.uppercase(Locale.US)], mc)
+                buyPriceInHomeCurrency = (prices[defaultCurrency.uppercase(Locale.US)]?.multiply(rate, mc))
 
                 // cal cost
                 cost = buyPriceInHomeCurrency.multiply(BigDecimal(binding.etAmount.text.toString()), mc)
-                binding. tvTotalAmountInCurrencyLabel.text = getString(R.string.transactionCost, cost, defaultCurrency.toUpperCase())
+                binding. tvTotalAmountInCurrencyLabel.text = getString(R.string.transactionCost, cost, defaultCurrency.uppercase(Locale.US))
             } else {
                 cost = buyPrice.multiply(BigDecimal(binding.etAmount.text.toString()), mc)
                 binding.  tvTotalAmountInCurrencyLabel.text = getString(R.string.transactionCost, cost, pairName)
@@ -303,7 +303,7 @@ class CoinTransactionActivity : AppCompatActivity(), CoinTransactionContract.Vie
                 if (data != null) {
                     exchangeName = ExchangeSearchActivity.getResultFromIntent(data)
                     binding. tvExchangeLabel.visibility = View.VISIBLE
-                    binding. tvExchange.text = exchangeName.toUpperCase()
+                    binding. tvExchange.text = exchangeName.uppercase(Locale.US)
 
                     binding. tvPair.text = getString(R.string.trading_pair)
                     pairName = ""
@@ -320,7 +320,7 @@ class CoinTransactionActivity : AppCompatActivity(), CoinTransactionContract.Vie
                     if (coin != null) {
                         binding. tvPair.text = getString(
                             R.string.coinPair,
-                            coin?.symbol, pairName.toUpperCase()
+                            coin?.symbol, pairName.uppercase(Locale.US)
                         )
 
                         getCoinPrice()

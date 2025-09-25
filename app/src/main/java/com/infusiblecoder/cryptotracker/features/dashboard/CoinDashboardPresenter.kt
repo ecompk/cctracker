@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.zip
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.util.Locale
 
 
 
@@ -42,7 +43,9 @@ class CoinDashboardPresenter(
                 val coinPriceList = dashboardRepository.getCoinPriceFull(fromCurrencySymbol, toCurrencySymbol)
                 val coinPriceMap: HashMap<String, CoinPrice> = hashMapOf()
                 coinPriceList.forEach { coinPrice ->
-                    coinPrice.fromSymbol?.let { fromCurrencySymbol -> coinPriceMap[fromCurrencySymbol.toUpperCase()] = coinPrice }
+                    coinPrice.fromSymbol?.let { fromCurrencySymbol ->
+                        coinPriceMap[fromCurrencySymbol.uppercase(Locale.US)] = coinPrice
+                    }
                 }
                 if (coinPriceMap.isNotEmpty()) {
                     CryptoTrackerCache.coinPriceMap.putAll(coinPriceMap)

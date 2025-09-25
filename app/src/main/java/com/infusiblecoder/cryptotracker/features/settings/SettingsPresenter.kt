@@ -8,6 +8,7 @@ import com.infusiblecoder.cryptotracker.models.getCoinFromCCCoin
 import com.infusiblecoder.cryptotracker.utils.defaultExchange
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.util.Locale
 
 
 
@@ -22,7 +23,7 @@ class SettingsPresenter(
                 val coinList: MutableList<WatchedCoin> = mutableListOf()
                 val ccCoinList = allCoinsFromAPI.first
                 ccCoinList.forEach { ccCoin ->
-                    val coinInfo = allCoinsFromAPI.second[ccCoin.symbol.toLowerCase()]
+                    val coinInfo = allCoinsFromAPI.second[ccCoin.symbol.lowercase(Locale.US)]
                     coinList.add(getCoinFromCCCoin(ccCoin, defaultExchange, defaultCurrency, coinInfo))
                 }
                 Timber.d("Inserted all coins in db with size ${coinList.size}")

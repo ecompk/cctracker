@@ -75,8 +75,8 @@ class DashboardHeaderItemView @JvmOverloads constructor(
             var totalPortfolioCost = BigDecimal.ZERO
 
             purchasedCoinList.forEach {
-                if (coinPriceListMap.containsKey(it.coin.symbol.toUpperCase())) {
-                    portfolioValue = portfolioValue.add(BigDecimal(coinPriceListMap[it.coin.symbol.toUpperCase()]?.price).multiply(it.purchaseQuantity))
+                if (coinPriceListMap.containsKey(it.coin.symbol.uppercase(Locale.US))) {
+                    portfolioValue = portfolioValue.add(BigDecimal(coinPriceListMap[it.coin.symbol.uppercase(Locale.US)]?.price).multiply(it.purchaseQuantity))
                     totalPortfolioCost = totalPortfolioCost.add(getTotalCost(dashboardHeaderModuleData.coinTransactionList, it.coin.symbol))
                 }
             }
