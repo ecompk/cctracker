@@ -27,14 +27,20 @@ android {
     }
 
     // 🔑 Add this
-    signingConfigs {
-        release {
-            storeFile file(System.getenv("CM_KEYSTORE_PATH") ?: "release-key.jks")
+   signingConfigs {
+    release {
+        def keystorePath = System.getenv("CM_KEYSTORE_PATH")
+        if (keystorePath != null) {
+            storeFile file(keystorePath)
             storePassword System.getenv("CM_KEYSTORE_PASSWORD") ?: ""
             keyAlias System.getenv("CM_KEY_ALIAS") ?: ""
             keyPassword System.getenv("CM_KEY_PASSWORD") ?: ""
+        } else {
+            println("⚠️  No CM_KEYSTORE_PATH found, skipping release signing")
         }
     }
+}
+
 
     buildTypes {
         release {
