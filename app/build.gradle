@@ -27,18 +27,22 @@ android {
     }
 
     // 🔑 Add this
-   signingConfigs {
+signingConfigs {
     release {
-        def keystorePath = System.getenv("CM_KEYSTORE_PATH")
-        if (keystorePath != null) {
-            storeFile file(keystorePath)
-            storePassword System.getenv("CM_KEYSTORE_PASSWORD") ?: ""
-            keyAlias System.getenv("CM_KEY_ALIAS") ?: ""
-            keyPassword System.getenv("CM_KEY_PASSWORD") ?: ""
-        } else {
-            println("⚠️  No CM_KEYSTORE_PATH found, skipping release signing")
-        }
+        storeFile file("my-release-key.ks")
+        storePassword "123456"
+        keyAlias "my-alias"
+        keyPassword "123456"
     }
+}
+
+buildTypes {
+    release {
+        signingConfig signingConfigs.release
+        minifyEnabled true
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+    debug {}
 }
 
 
