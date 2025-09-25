@@ -31,7 +31,7 @@ signingConfigs {
     release {
         storeFile file("my-release-key.jks")
         storePassword "123456"
-        keyAlias "my-alias"
+        keyAlias "myalias"
         keyPassword "123456"
     }
 }
