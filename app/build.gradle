@@ -9,12 +9,12 @@ apply plugin: "com.github.ben-manes.versions"
 apply plugin: 'kotlin-parcelize'
 
 android {
-    compileSdk 34
+    compileSdk 35
     namespace "com.infusiblecoder.cryptotracker"
     defaultConfig {
         applicationId "com.ccoin.cryptotracker"
         minSdk 23
-        targetSdkVersion 34
+        targetSdkVersion 35
         multiDexEnabled true
         versionCode 5
         versionName "1.3"
