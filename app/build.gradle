@@ -29,7 +29,7 @@ android {
     // 🔑 Add this
 signingConfigs {
     release {
-        storeFile file("my-release-key.ks")
+        storeFile file("my-release-key.jks")
         storePassword "123456"
         keyAlias "my-alias"
         keyPassword "123456"
