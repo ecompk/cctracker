@@ -10,19 +10,21 @@ workflows:
         - pattern: "main"
           include: true
           source: true
+
     scripts:
-      - name: Build APK & AAB
+      - name: Build APK & AAB (Signed)
         script: |
           chmod +x gradlew
-          ./gradlew clean assembleRelease bundleRelease
-    artifacts:
-      - app/build/outputs/apk/release/*.apk
-      - app/build/outputs/bundle/release/*.aab
-    scripts:
+          ./gradlew clean assembleRelease bundleRelease \
+            -Pandroid.injected.signing.store.file=$CM_KEYSTORE_PATH \
+            -Pandroid.injected.signing.store.password=$CM_KEYSTORE_PASSWORD \
+            -Pandroid.injected.signing.key.alias=$CM_KEY_ALIAS \
+            -Pandroid.injected.signing.key.password=$CM_KEY_PASSWORD
+
       - name: Clean Gradle Cache
         script: |
           rm -rf ~/.gradle/caches
-      - name: Build APK & AAB
-        script: |
-          chmod +x gradlew
-          ./gradlew clean assembleRelease bundleRelease
+
+    artifacts:
+      - app/build/outputs/apk/release/*.apk
+      - app/build/outputs/bundle/release/*.aab

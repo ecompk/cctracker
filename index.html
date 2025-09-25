@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC Crypto Tracker - App Previews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Tailwind gray-900 */
+        }
+        .phone-mockup {
+            width: 375px;
+            height: 812px;
+            background-color: #030712; /* Tailwind gray-950 */
+            border-radius: 40px;
+            border: 12px solid #1f2937; /* Tailwind gray-800 */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            overflow: hidden;
+            position: relative;
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 30px;
+            background-color: #1f2937; /* Tailwind gray-800 */
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 10;
+        }
+        .phone-content {
+            padding: 20px;
+            padding-top: 40px;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-width: none; /* Firefox */
+        }
+        .phone-content::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-8">
+
+    <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-white mb-2">CC Crypto Tracker</h1>
+        <p class="text-xl text-gray-400">App Store Preview Screens</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-12">
+
+        <!-- Screen 1: Watchlist (UPDATED) -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">Create Your Personal Watchlist</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-8">
+                        <i data-lucide="menu" class="text-gray-400"></i>
+                        <h3 class="text-lg font-semibold">Watchlist</h3>
+                        <i data-lucide="plus-circle" class="text-blue-500 w-6 h-6"></i>
+                    </div>
+
+                    <!-- Watched Coins -->
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                                <div>
+                                    <p class="font-semibold">Bitcoin</p>
+                                    <p class="text-sm text-gray-400">BTC</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$70,000.81</p>
+                                <p class="text-sm text-green-500 text-right">+5.2%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/6366f1/ffffff?text=E" class="rounded-full" alt="ETH">
+                                <div>
+                                    <p class="font-semibold">Ethereum</p>
+                                    <p class="text-sm text-gray-400">ETH</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$3,500.80</p>
+                                <p class="text-sm text-red-500 text-right">-1.8%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                           <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/84cc16/ffffff?text=S" class="rounded-full" alt="SOL">
+                                <div>
+                                    <p class="font-semibold">Solana</p>
+                                    <p class="text-sm text-gray-400">SOL</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$120.45</p>
+                                <p class="text-sm text-green-500 text-right">+12.1%</p>
+                            </div>
+                        </div>
+                         <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/38bdf8/ffffff?text=C" class="rounded-full" alt="ADA">
+                                <div>
+                                    <p class="font-semibold">Cardano</p>
+                                    <p class="text-sm text-gray-400">ADA</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$0.45</p>
+                                <p class="text-sm text-green-500 text-right">+2.1%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/facc15/ffffff?text=D" class="rounded-full" alt="DOGE">
+                                <div>
+                                    <p class="font-semibold">Dogecoin</p>
+                                    <p class="text-sm text-gray-400">DOGE</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$0.15</p>
+                                <p class="text-sm text-red-500 text-right">-4.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 2: Market -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">Stay Ahead of The Market</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                     <!-- Header -->
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold">Market</h3>
+                        <i data-lucide="search" class="text-gray-400"></i>
+                    </div>
+
+                    <!-- Coin List -->
+                    <div class="space-y-3">
+                        <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                                <div>
+                                    <p class="font-semibold">BTC</p>
+                                    <p class="text-sm text-gray-400">Bitcoin</p>
+                                </div>
+                            </div>
+                            <div class="w-20 h-10 flex items-center">
+                                <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 25 Q 15 10, 25 20 T 45 25 T 65 15 L 75 20" stroke="#22c55e" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$70,000.81</p>
+                                <p class="text-sm text-green-500 text-right">+5.2%</p>
+                            </div>
+                        </div>
+                         <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/6366f1/ffffff?text=E" class="rounded-full" alt="ETH">
+                                <div>
+                                    <p class="font-semibold">ETH</p>
+                                    <p class="text-sm text-gray-400">Ethereum</p>
+                                </div>
+                            </div>
+                            <div class="w-20 h-10 flex items-center">
+                               <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 15 Q 15 30, 25 20 T 45 15 T 65 25 L 75 20" stroke="#ef4444" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$3,500.80</p>
+                                <p class="text-sm text-red-500 text-right">-1.8%</p>
+                            </div>
+                        </div>
+                        <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/38bdf8/ffffff?text=C" class="rounded-full" alt="ADA">
+                                <div>
+                                    <p class="font-semibold">ADA</p>
+                                    <p class="text-sm text-gray-400">Cardano</p>
+                                </div>
+                            </div>
+                             <div class="w-20 h-10 flex items-center">
+                                <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 25 Q 15 10, 25 20 T 45 25 T 65 15 L 75 20" stroke="#22c55e" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$0.45</p>
+                                <p class="text-sm text-green-500 text-right">+2.1%</p>
+                            </div>
+                        </div>
+                        <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                               <img src="https://placehold.co/40x40/84cc16/ffffff?text=S" class="rounded-full" alt="SOL">
+                                <div>
+                                    <p class="font-semibold">SOL</p>
+                                    <p class="text-sm text-gray-400">Solana</p>
+                                </div>
+                            </div>
+                             <div class="w-20 h-10 flex items-center">
+                                <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 10 Q 15 35, 25 20 T 45 15 T 65 30 L 75 15" stroke="#22c55e" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$120.45</p>
+                                <p class="text-sm text-green-500 text-right">+12.1%</p>
+                            </div>
+                        </div>
+                         <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/facc15/ffffff?text=D" class="rounded-full" alt="DOGE">
+                                <div>
+                                    <p class="font-semibold">DOGE</p>
+                                    <p class="text-sm text-gray-400">Dogecoin</p>
+                                </div>
+                            </div>
+                            <div class="w-20 h-10 flex items-center">
+                               <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 15 Q 15 30, 25 20 T 45 15 T 65 25 L 75 20" stroke="#ef4444" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$0.15</p>
+                                <p class="text-sm text-red-500 text-right">-4.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 3: Coin Detail -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">In-Depth Coin Analysis</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-4">
+                        <i data-lucide="arrow-left" class="text-gray-400"></i>
+                         <div class="flex items-center gap-2">
+                             <img src="https://placehold.co/24x24/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                            <h3 class="text-lg font-semibold">Bitcoin</h3>
+                         </div>
+                        <i data-lucide="star" class="text-gray-400"></i>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="mb-4">
+                        <p class="text-4xl font-bold">$70,000.81</p>
+                        <div class="flex items-center gap-2 text-green-500">
+                            <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                            <span>$3,450.10 (5.2%) Today</span>
+                        </div>
+                    </div>
+
+                    <!-- Chart Placeholder -->
+                    <div class="h-64 bg-gray-800/50 rounded-lg mb-6 flex items-center justify-center text-gray-500">
+                        <p>Candlestick Chart Area</p>
+                    </div>
+
+                    <!-- Timeframes -->
+                    <div class="flex justify-around text-sm text-gray-400 mb-6">
+                        <button class="bg-blue-600 text-white px-3 py-1 rounded-full">1D</button>
+                        <button>1W</button>
+                        <button>1M</button>
+                        <button>1Y</button>
+                        <button>All</button>
+                    </div>
+
+                    <!-- Market Stats -->
+                    <h4 class="text-lg font-semibold mb-3">Market Stats</h4>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-gray-400">Market Cap</p>
+                            <p class="font-semibold">$1.3T</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-400">Volume (24h)</p>
+                            <p class="font-semibold">$55.2B</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-400">Circulating Supply</p>
+                            <p class="font-semibold">19.7M BTC</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-400">All-Time High</p>
+                            <p class="font-semibold">$73,750.07</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 4: Alerts -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">Never Miss a Price Movement</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold">Price Alerts</h3>
+                        <i data-lucide="plus-circle" class="text-blue-500 w-7 h-7"></i>
+                    </div>
+
+                    <!-- Alert List -->
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center justify-between">
+                               <div class="flex items-center gap-3">
+                                   <img src="https://placehold.co/32x32/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                                   <p class="font-semibold">Bitcoin (BTC)</p>
+                               </div>
+                               <p class="text-green-500 font-medium">Active</p>
+                            </div>
+                            <div class="border-t border-gray-700 my-3"></div>
+                            <div class="flex justify-between text-sm">
+                                <p class="text-gray-400">Price reaches</p>
+                                <p class="font-semibold">$72,000.00</p>
+                            </div>
+                        </div>
+
+                         <div class="p-4 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center justify-between">
+                               <div class="flex items-center gap-3">
+                                   <img src="https://placehold.co/32x32/6366f1/ffffff?text=E" class="rounded-full" alt="ETH">
+                                   <p class="font-semibold">Ethereum (ETH)</p>
+                               </div>
+                               <p class="text-green-500 font-medium">Active</p>
+                            </div>
+                            <div class="border-t border-gray-700 my-3"></div>
+                            <div class="flex justify-between text-sm">
+                                <p class="text-gray-400">Price drops to</p>
+                                <p class="font-semibold">$3,400.00</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-gray-800/50 rounded-lg opacity-60">
+                            <div class="flex items-center justify-between">
+                               <div class="flex items-center gap-3">
+                                   <img src="https://placehold.co/32x32/84cc16/ffffff?text=S" class="rounded-full" alt="SOL">
+                                   <p class="font-semibold">Solana (SOL)</p>
+                               </div>
+                               <p class="text-gray-400 font-medium">Triggered</p>
+                            </div>
+                            <div class="border-t border-gray-700 my-3"></div>
+                            <div class="flex justify-between text-sm">
+                                <p class="text-gray-400">Price reached</p>
+                                <p class="font-semibold">$120.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 5: News -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">Get The Latest Crypto News</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold">Crypto News</h3>
+                    </div>
+
+                    <!-- News Articles -->
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <img src="https://placehold.co/100x100/3b82f6/ffffff?text=Crypto" class="rounded-lg" alt="News 1">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">CoinDesk • 2h ago</p>
+                                <p class="font-semibold leading-tight">Bitcoin Halving Complete: What's Next for the Price?</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <img src="https://placehold.co/100x100/10b981/ffffff?text=Web3" class="rounded-lg" alt="News 2">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Decrypt • 5h ago</p>
+                                <p class="font-semibold leading-tight">Ethereum Layer-2 Solutions See Record Transaction Volume.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <img src="https://placehold.co/100x100/f59e0b/ffffff?text=Regs" class="rounded-lg" alt="News 3">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">The Block • 1d ago</p>
+                                <p class="font-semibold leading-tight">Global Regulators Meet to Discuss Crypto Framework.</p>
+                            </div>
+                        </div>
+                         <div class="flex gap-4">
+                            <img src="https://placehold.co/100x100/a855f7/ffffff?text=NFT" class="rounded-lg" alt="News 4">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">NFT Evening • 1d ago</p>
+                                <p class="font-semibold leading-tight">Is the NFT market poised for a comeback this summer?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC Crypto Tracker - App Previews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Tailwind gray-900 */
+        }
+        /* Phone Mockup Styles */
+        .phone-mockup {
+            width: 375px;
+            height: 812px;
+            background-color: #030712; /* Tailwind gray-950 */
+            border-radius: 40px;
+            border: 12px solid #1f2937; /* Tailwind gray-800 */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            overflow: hidden;
+            position: relative;
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 30px;
+            background-color: #1f2937; /* Tailwind gray-800 */
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 10;
+        }
+        .phone-content {
+            padding: 20px;
+            padding-top: 40px;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-width: none; /* Firefox */
+        }
+        .phone-content::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+
+        /* Tablet Mockup Styles */
+        .tablet-mockup {
+            width: 768px;
+            height: 1024px;
+            background-color: #030712; /* Tailwind gray-950 */
+            border-radius: 24px;
+            border: 14px solid #1f2937; /* Tailwind gray-800 */
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            overflow: hidden;
+            position: relative;
+        }
+        .tablet-content {
+            padding: 24px;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+        .tablet-content::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-8">
+
+    <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-white mb-2">CC Crypto Tracker</h1>
+        <p class="text-xl text-gray-400">App Store Preview Screens</p>
+    </div>
+
+    <!-- Phone Previews -->
+    <h2 class="text-3xl font-bold text-white mb-8 mt-4">Phone Previews</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-12">
+
+        <!-- Screen 1: Watchlist (UPDATED) -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">Create Your Personal Watchlist</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-8">
+                        <i data-lucide="menu" class="text-gray-400"></i>
+                        <h3 class="text-lg font-semibold">Watchlist</h3>
+                        <i data-lucide="plus-circle" class="text-blue-500 w-6 h-6"></i>
+                    </div>
+
+                    <!-- Watched Coins -->
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                                <div>
+                                    <p class="font-semibold">Bitcoin</p>
+                                    <p class="text-sm text-gray-400">BTC</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$70,000.81</p>
+                                <p class="text-sm text-green-500 text-right">+5.2%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/6366f1/ffffff?text=E" class="rounded-full" alt="ETH">
+                                <div>
+                                    <p class="font-semibold">Ethereum</p>
+                                    <p class="text-sm text-gray-400">ETH</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$3,500.80</p>
+                                <p class="text-sm text-red-500 text-right">-1.8%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                           <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/84cc16/ffffff?text=S" class="rounded-full" alt="SOL">
+                                <div>
+                                    <p class="font-semibold">Solana</p>
+                                    <p class="text-sm text-gray-400">SOL</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$120.45</p>
+                                <p class="text-sm text-green-500 text-right">+12.1%</p>
+                            </div>
+                        </div>
+                         <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/38bdf8/ffffff?text=C" class="rounded-full" alt="ADA">
+                                <div>
+                                    <p class="font-semibold">Cardano</p>
+                                    <p class="text-sm text-gray-400">ADA</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$0.45</p>
+                                <p class="text-sm text-green-500 text-right">+2.1%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/facc15/ffffff?text=D" class="rounded-full" alt="DOGE">
+                                <div>
+                                    <p class="font-semibold">Dogecoin</p>
+                                    <p class="text-sm text-gray-400">DOGE</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$0.15</p>
+                                <p class="text-sm text-red-500 text-right">-4.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 2: Market -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">Stay Ahead of The Market</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                     <!-- Header -->
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold">Market</h3>
+                        <i data-lucide="search" class="text-gray-400"></i>
+                    </div>
+
+                    <!-- Coin List -->
+                    <div class="space-y-3">
+                        <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                                <div>
+                                    <p class="font-semibold">BTC</p>
+                                    <p class="text-sm text-gray-400">Bitcoin</p>
+                                </div>
+                            </div>
+                            <div class="w-20 h-10 flex items-center">
+                                <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 25 Q 15 10, 25 20 T 45 25 T 65 15 L 75 20" stroke="#22c55e" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$70,000.81</p>
+                                <p class="text-sm text-green-500 text-right">+5.2%</p>
+                            </div>
+                        </div>
+                         <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/6366f1/ffffff?text=E" class="rounded-full" alt="ETH">
+                                <div>
+                                    <p class="font-semibold">ETH</p>
+                                    <p class="text-sm text-gray-400">Ethereum</p>
+                                </div>
+                            </div>
+                            <div class="w-20 h-10 flex items-center">
+                               <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 15 Q 15 30, 25 20 T 45 15 T 65 25 L 75 20" stroke="#ef4444" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$3,500.80</p>
+                                <p class="text-sm text-red-500 text-right">-1.8%</p>
+                            </div>
+                        </div>
+                        <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/38bdf8/ffffff?text=C" class="rounded-full" alt="ADA">
+                                <div>
+                                    <p class="font-semibold">ADA</p>
+                                    <p class="text-sm text-gray-400">Cardano</p>
+                                </div>
+                            </div>
+                             <div class="w-20 h-10 flex items-center">
+                                <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 25 Q 15 10, 25 20 T 45 25 T 65 15 L 75 20" stroke="#22c55e" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$0.45</p>
+                                <p class="text-sm text-green-500 text-right">+2.1%</p>
+                            </div>
+                        </div>
+                        <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                               <img src="https://placehold.co/40x40/84cc16/ffffff?text=S" class="rounded-full" alt="SOL">
+                                <div>
+                                    <p class="font-semibold">SOL</p>
+                                    <p class="text-sm text-gray-400">Solana</p>
+                                </div>
+                            </div>
+                             <div class="w-20 h-10 flex items-center">
+                                <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 10 Q 15 35, 25 20 T 45 15 T 65 30 L 75 15" stroke="#22c55e" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$120.45</p>
+                                <p class="text-sm text-green-500 text-right">+12.1%</p>
+                            </div>
+                        </div>
+                         <!-- Coin Item -->
+                        <div class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50">
+                            <div class="flex items-center gap-4">
+                                <img src="https://placehold.co/40x40/facc15/ffffff?text=D" class="rounded-full" alt="DOGE">
+                                <div>
+                                    <p class="font-semibold">DOGE</p>
+                                    <p class="text-sm text-gray-400">Dogecoin</p>
+                                </div>
+                            </div>
+                            <div class="w-20 h-10 flex items-center">
+                               <svg width="100%" height="100%" viewBox="0 0 80 40"><path d="M5 15 Q 15 30, 25 20 T 45 15 T 65 25 L 75 20" stroke="#ef4444" fill="none" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-right">$0.15</p>
+                                <p class="text-sm text-red-500 text-right">-4.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 3: Coin Detail -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">In-Depth Coin Analysis</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-4">
+                        <i data-lucide="arrow-left" class="text-gray-400"></i>
+                         <div class="flex items-center gap-2">
+                             <img src="https://placehold.co/24x24/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                            <h3 class="text-lg font-semibold">Bitcoin</h3>
+                         </div>
+                        <i data-lucide="star" class="text-gray-400"></i>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="mb-4">
+                        <p class="text-4xl font-bold">$70,000.81</p>
+                        <div class="flex items-center gap-2 text-green-500">
+                            <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                            <span>$3,450.10 (5.2%) Today</span>
+                        </div>
+                    </div>
+
+                    <!-- Chart Placeholder -->
+                    <div class="h-64 bg-gray-800/50 rounded-lg mb-6 flex items-center justify-center text-gray-500">
+                        <p>Candlestick Chart Area</p>
+                    </div>
+
+                    <!-- Timeframes -->
+                    <div class="flex justify-around text-sm text-gray-400 mb-6">
+                        <button class="bg-blue-600 text-white px-3 py-1 rounded-full">1D</button>
+                        <button>1W</button>
+                        <button>1M</button>
+                        <button>1Y</button>
+                        <button>All</button>
+                    </div>
+
+                    <!-- Market Stats -->
+                    <h4 class="text-lg font-semibold mb-3">Market Stats</h4>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="text-gray-400">Market Cap</p>
+                            <p class="font-semibold">$1.3T</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-400">Volume (24h)</p>
+                            <p class="font-semibold">$55.2B</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-400">Circulating Supply</p>
+                            <p class="font-semibold">19.7M BTC</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-400">All-Time High</p>
+                            <p class="font-semibold">$73,750.07</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 4: Alerts -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">Never Miss a Price Movement</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold">Price Alerts</h3>
+                        <i data-lucide="plus-circle" class="text-blue-500 w-7 h-7"></i>
+                    </div>
+
+                    <!-- Alert List -->
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center justify-between">
+                               <div class="flex items-center gap-3">
+                                   <img src="https://placehold.co/32x32/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                                   <p class="font-semibold">Bitcoin (BTC)</p>
+                               </div>
+                               <p class="text-green-500 font-medium">Active</p>
+                            </div>
+                            <div class="border-t border-gray-700 my-3"></div>
+                            <div class="flex justify-between text-sm">
+                                <p class="text-gray-400">Price reaches</p>
+                                <p class="font-semibold">$72,000.00</p>
+                            </div>
+                        </div>
+
+                         <div class="p-4 bg-gray-800/50 rounded-lg">
+                            <div class="flex items-center justify-between">
+                               <div class="flex items-center gap-3">
+                                   <img src="https://placehold.co/32x32/6366f1/ffffff?text=E" class="rounded-full" alt="ETH">
+                                   <p class="font-semibold">Ethereum (ETH)</p>
+                               </div>
+                               <p class="text-green-500 font-medium">Active</p>
+                            </div>
+                            <div class="border-t border-gray-700 my-3"></div>
+                            <div class="flex justify-between text-sm">
+                                <p class="text-gray-400">Price drops to</p>
+                                <p class="font-semibold">$3,400.00</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-gray-800/50 rounded-lg opacity-60">
+                            <div class="flex items-center justify-between">
+                               <div class="flex items-center gap-3">
+                                   <img src="https://placehold.co/32x32/84cc16/ffffff?text=S" class="rounded-full" alt="SOL">
+                                   <p class="font-semibold">Solana (SOL)</p>
+                               </div>
+                               <p class="text-gray-400 font-medium">Triggered</p>
+                            </div>
+                            <div class="border-t border-gray-700 my-3"></div>
+                            <div class="flex justify-between text-sm">
+                                <p class="text-gray-400">Price reached</p>
+                                <p class="font-semibold">$120.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 5: News -->
+        <div class="flex flex-col items-center gap-4">
+            <h2 class="text-lg font-semibold text-gray-300">Get The Latest Crypto News</h2>
+            <div class="phone-mockup">
+                <div class="phone-notch"></div>
+                <div class="phone-content text-white">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold">Crypto News</h3>
+                    </div>
+
+                    <!-- News Articles -->
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <img src="https://placehold.co/100x100/3b82f6/ffffff?text=Crypto" class="rounded-lg" alt="News 1">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">CoinDesk • 2h ago</p>
+                                <p class="font-semibold leading-tight">Bitcoin Halving Complete: What's Next for the Price?</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <img src="https://placehold.co/100x100/10b981/ffffff?text=Web3" class="rounded-lg" alt="News 2">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Decrypt • 5h ago</p>
+                                <p class="font-semibold leading-tight">Ethereum Layer-2 Solutions See Record Transaction Volume.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <img src="https://placehold.co/100x100/f59e0b/ffffff?text=Regs" class="rounded-lg" alt="News 3">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">The Block • 1d ago</p>
+                                <p class="font-semibold leading-tight">Global Regulators Meet to Discuss Crypto Framework.</p>
+                            </div>
+                        </div>
+                         <div class="flex gap-4">
+                            <img src="https://placehold.co/100x100/a855f7/ffffff?text=NFT" class="rounded-lg" alt="News 4">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">NFT Evening • 1d ago</p>
+                                <p class="font-semibold leading-tight">Is the NFT market poised for a comeback this summer?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="w-full max-w-7xl mx-auto my-16 border-t border-gray-700"></div>
+
+    <!-- Tablet Previews -->
+    <h2 class="text-3xl font-bold text-white mb-8">Tablet Previews</h2>
+    <div class="flex flex-col items-center gap-4">
+        <h2 class="text-lg font-semibold text-gray-300">Powerful Dashboard View for Tablets</h2>
+        <div class="tablet-mockup">
+            <div class="tablet-content text-white">
+                <!-- Header -->
+                <header class="flex items-center justify-between pb-4 border-b border-gray-800 mb-6">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="bar-chart-2" class="text-blue-500 w-8 h-8"></i>
+                        <h1 class="text-2xl font-bold">CC Crypto Tracker</h1>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <i data-lucide="search" class="text-gray-400"></i>
+                        <i data-lucide="bell" class="text-gray-400"></i>
+                        <img src="https://placehold.co/40x40/a78bfa/ffffff?text=U" class="rounded-full" alt="User">
+                    </div>
+                </header>
+
+                <!-- Main Content Grid -->
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- Left Column: Watchlist -->
+                    <div class="col-span-1 bg-gray-900/50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-4">Watchlist</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between p-3 bg-blue-600/20 border border-blue-500 rounded-lg">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://placehold.co/32x32/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                                    <div><p class="font-semibold">Bitcoin</p><p class="text-sm text-gray-400">BTC</p></div>
+                                </div>
+                                <div><p class="font-semibold text-right">$70,000.81</p><p class="text-sm text-green-500 text-right">+5.2%</p></div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 hover:bg-gray-800/50 rounded-lg">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://placehold.co/32x32/6366f1/ffffff?text=E" class="rounded-full" alt="ETH">
+                                    <div><p class="font-semibold">Ethereum</p><p class="text-sm text-gray-400">ETH</p></div>
+                                </div>
+                                <div><p class="font-semibold text-right">$3,500.80</p><p class="text-sm text-red-500 text-right">-1.8%</p></div>
+                            </div>
+                            <div class="flex items-center justify-between p-3 hover:bg-gray-800/50 rounded-lg">
+                               <div class="flex items-center gap-3">
+                                    <img src="https://placehold.co/32x32/84cc16/ffffff?text=S" class="rounded-full" alt="SOL">
+                                    <div><p class="font-semibold">Solana</p><p class="text-sm text-gray-400">SOL</p></div>
+                                </div>
+                                <div><p class="font-semibold text-right">$120.45</p><p class="text-sm text-green-500 text-right">+12.1%</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Coin Detail -->
+                    <div class="col-span-2">
+                        <!-- Coin Header -->
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://placehold.co/48x48/f97316/ffffff?text=B" class="rounded-full" alt="BTC">
+                            <div>
+                                <h2 class="text-3xl font-bold">Bitcoin <span class="text-gray-400">BTC</span></h2>
+                                <p class="text-3xl font-bold">$70,000.81 <span class="text-xl text-green-500 font-semibold">+5.2%</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Chart Area -->
+                        <div class="h-96 bg-gray-900/50 rounded-lg mb-6 flex flex-col p-4">
+                            <div class="flex justify-end text-sm text-gray-400 mb-2">
+                                <button class="hover:bg-gray-700 px-3 py-1 rounded-md">1H</button>
+                                <button class="bg-blue-600 text-white px-3 py-1 rounded-md">1D</button>
+                                <button class="hover:bg-gray-700 px-3 py-1 rounded-md">1W</button>
+                                <button class="hover:bg-gray-700 px-3 py-1 rounded-md">1M</button>
+                                <button class="hover:bg-gray-700 px-3 py-1 rounded-md">1Y</button>
+                            </div>
+                             <div class="flex-grow flex items-center justify-center text-gray-500">
+                                <p>Detailed Candlestick Chart Area</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Market Stats -->
+                        <h4 class="text-xl font-semibold mb-4">Market Statistics</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-lg">
+                            <div><p class="text-gray-400 text-sm">Market Cap</p><p class="font-semibold">$1.3T</p></div>
+                            <div><p class="text-gray-400 text-sm">Volume (24h)</p><p class="font-semibold">$55.2B</p></div>
+                            <div><p class="text-gray-400 text-sm">Circulating Supply</p><p class="font-semibold">19.7M</p></div>
+                            <div><p class="text-gray-400 text-sm">All-Time High</p><p class="font-semibold">$73.7k</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
